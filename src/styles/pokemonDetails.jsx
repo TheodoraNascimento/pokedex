@@ -8,6 +8,7 @@ export const Section = styled.section`
 `
 
 export const DivCard = styled.div`
+min-width: 300px;
 max-width: 300px;
 max-height: 400px;
 padding: 30px;
