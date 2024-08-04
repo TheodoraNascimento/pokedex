@@ -5,7 +5,7 @@ import { ThemeContext } from "./contexts/theme-context";
 import { Link } from "react-router-dom";
 import { getPokemonByType, getPokemonDetails } from "./server/getPokemonList";
 
-export default function TypeSelected(props) {
+export const TypeSelected = (props) => {
   const { theme } = useContext(ThemeContext)
   const [offSet, setOffSet] = useState(10)
   let { type } = useParams()
@@ -44,8 +44,8 @@ export default function TypeSelected(props) {
         )
 
         console.log("searchType", searchType);
-        console.log("searchType", searchTypeNames);
-        
+        console.log("searchTypeNames", searchTypeNames);
+
         setPokemonByType({
           pokemonListByType: searchTypeNames,
           pokemonDetails: pokemonDetailsByType

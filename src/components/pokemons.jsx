@@ -6,7 +6,7 @@ import { Link} from "react-router-dom";
 
 
 export const GetPokedex = (props) => {
-    const { theme, setTheme } = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
    
     const [offSet, setOffSet] = useState(0)
     const [pokedex, setPokedex] = useState({

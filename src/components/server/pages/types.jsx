@@ -1,4 +1,4 @@
-import TypeSelected from "../../searchByType"
+import {TypeSelected} from "../../searchByType"
 import { Nav } from "../../sections/header"
 
 export const Type = () => {
