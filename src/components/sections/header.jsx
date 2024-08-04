@@ -2,12 +2,9 @@ import {Header, Div, Img, ImgLogo, Input, Select, Button} from "../../styles/hea
 import logo from "../../img/pokemon-logo-transparent.png";
 import pokeball from "../../img/favicon_io/apple-touch-icon.png";
 import { ThemeButton } from "../themeButton/themeButton";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/theme-context";
 import { Link, useNavigate } from "react-router-dom";
-import {SearchByName} from "../searchByName";
-import  TypeSelected from "../searchByType"
-import { Names } from "../server/pages/name";
 
 
 export const Nav = (props) => {
@@ -58,9 +55,7 @@ export const Nav = (props) => {
     }
   }
 
-
     console.log("beforeSelection", type);
-
 
     return(
         <>
@@ -108,10 +103,7 @@ export const Nav = (props) => {
               
             </Select >
             </form>
-            
-            {/* <Button {...props}
-            style={{ color: theme.color, background: theme.background }}> <Link to={`/pokedex/${type}`}>Search</Link></Button> */}
-            
+                       
             </Div>
          
             {console.log(type)}

@@ -43,8 +43,9 @@ export default function TypeSelected(props) {
         })
         )
 
+        console.log("searchType", searchType);
         console.log("searchType", searchTypeNames);
-
+        
         setPokemonByType({
           pokemonListByType: searchTypeNames,
           pokemonDetails: pokemonDetailsByType
