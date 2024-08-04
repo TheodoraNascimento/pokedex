@@ -848,6 +848,7 @@ line-height: 25px;
   height: 100%;
   padding: 20px 10px 10px 10px;
 `,qE=M.div`
+min-width: 300px;
 max-width: 300px;
 max-height: 400px;
 padding: 30px;
