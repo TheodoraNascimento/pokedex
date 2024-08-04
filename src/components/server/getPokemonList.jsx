@@ -18,9 +18,13 @@ async function getPokemonDetails(pokemon) {
     try{
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
         const pokemonDetails = response.data
+        if(pokemonDetails === ""){
+            return;
+          }
         console.log("PokemonDetails", pokemonDetails);
-        return pokemonDetails
-    }catch(error){
+        return pokemonDetails;
+        }
+    catch(error){
         console.log("getPokemonDetailserror", error);
     }
         

@@ -23,22 +23,26 @@ export const TypeSelected = (props) => {
       try {
         const searchType = await getPokemonByType(type)
         const searchTypeNames = await searchType.pokemon.map((pokemon) => {
+
           return (
             pokemon.pokemon.name
-          )
-        })
+          )}
+        )
         const pokemonDetailsByType = await Promise.all(searchTypeNames.map(async (name) => {
           const details = await getPokemonDetails(name)
+          if(details == ""){
+            return;
+          }
           return ({
-            name: details.name,
-            number: details.id,
-            sprite: details.sprites.other.home.front_default,
-            types: details.types.map(types => {
+            name: details?.name,
+            number: details?.id,
+            sprite: details?.sprites?.other.home.front_default,
+            types: details?.types.map(types => {
               return (
                 [types.type.name]
               )
             }),
-            firstType: details.types[0].type.name
+            firstType: details?.types[0].type.name
           })
         })
         )
@@ -70,6 +74,9 @@ export const TypeSelected = (props) => {
         <Ul >
           {pokemonByType.pokemonDetails.map((pokemon, index) => {
             if (index <= offSet) {
+              if(!pokemon.name){
+                return;
+              }
               return (
                 <Li key={index} color={pokemon.firstType}>
                   <Link to={`/pokedex/pokemon/${pokemon.name}`}>

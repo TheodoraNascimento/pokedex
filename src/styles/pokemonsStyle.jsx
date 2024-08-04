@@ -62,10 +62,7 @@ ${(props) => {
                background-color: #53A4CF; `
       case "dark":
          return css`
-               background-color: #707070; `
-      case "water":
-         return css`
-               background-color: #4592C4; `                   
+               background-color: #707070; `                  
    }
    
   }} 
