@@ -19,6 +19,7 @@ export const TypeSelected = (props) => {
   }
 
   useEffect(() => {
+    setOffSet(10)
     const fetchData = async () => {
       try {
         const searchType = await getPokemonByType(type)

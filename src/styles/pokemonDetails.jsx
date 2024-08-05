@@ -40,7 +40,7 @@ export const Abilities = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding-left: 100px;
+padding: 0 20px 0 80px;
 max-width: 100%;
 text-transform: capitalize;
 gap: 30px;
